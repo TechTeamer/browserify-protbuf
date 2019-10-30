@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package test.other;
+
+service OtherService {
+    rpc differentMethod (TextMessage) returns (TextMessage) {}
+}
+
+message TextMessage {
+    required string text = 1;
+}

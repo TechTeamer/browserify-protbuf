@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package test;
+
+service TestService {
+    rpc Echo (TextMessage) returns (TextMessage) {}
+}
+
+message TextMessage {
+    required string text = 1;
+}

@@ -1,0 +1,40 @@
+{
+  "name": "@techtemaer/browserify-protbuf",
+  "version": "1.0.0",
+  "description": "Browserify transform to directly require `.proto` files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mkdir -p dist && browserify -t ./index.js test/test.js > dist/test.js && mocha dist/test.js",
+    "lint": "eslint . && echo 'npm run lint: OK'",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [
+    "browserify",
+    "browserify-transform",
+    "transform",
+    "protobufjs"
+  ],
+  "homepage": "https://github.com/techteamer/browserify-protbuf",
+  "author": "TechTeamer",
+  "bugs": "https://github.com/techteamer/browserify-protbuf/issues",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/techteamer/browserify-protbuf.git"
+  },
+  "dependencies": {
+    "through2": "^3.0.1",
+    "protobufjs": "^6.8.8"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-config-standard": "^14.1.0",
+    "browserify": "^16.5.0",
+    "mocha": "^6.2.2",
+    "chai": "^4.2.0"
+  }
+}
