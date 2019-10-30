@@ -1,5 +1,5 @@
 {
-  "name": "@techtemaer/browserify-protbuf",
+  "name": "@techteamer/browserify-protbuf",
   "version": "1.0.0",
   "description": "Browserify transform to directly require `.proto` files.",
   "main": "index.js",
