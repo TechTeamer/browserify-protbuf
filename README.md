@@ -2,6 +2,18 @@
 
 `browserify-protobuf` is a Browserify transform.
 With this tool you can require protocol buffer files directly in your code.
+You can and avoid additional HTTP requests when using `protobufjs`
+on the client side by replacing lines like these:
+
+```javascript
+const protobuf = require('protobufjs')
+const exampleProto = protobuf.load('protocol/example.proto')
+```
+
+with this:
+```javascript
+const exampleProto = require('protocol/example.proto')
+```
 
 It is based on the `pbjs` cli command of `protobufjs`. And uses the `json-module` flag, but it loads each
 required protocol buffer into a separate protobuf Root object.
